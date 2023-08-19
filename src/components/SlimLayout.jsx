@@ -11,14 +11,7 @@ export function SlimLayout({ children }) {
             {children}
           </main>
         </div>
-        <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
-          <Image
-            className="absolute inset-0 h-full w-full object-cover"
-            src={backgroundImage}
-            alt=""
-            unoptimized
-          />
-        </div>
+        <div className="hidden bg-gradient-to-r from-violet-500 to-violet-600 sm:contents lg:relative lg:block lg:flex-1" />
       </div>
     </>
   )

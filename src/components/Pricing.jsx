@@ -51,7 +51,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
     <section
       className={clsx(
         'flex flex-col rounded-3xl px-6 sm:px-8',
-        featured ? 'order-first bg-blue-600 py-8 lg:order-none' : 'lg:py-8'
+        featured ? 'order-first bg-violet-600 py-8 lg:order-none' : 'lg:py-8'
       )}
     >
       <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
@@ -104,7 +104,7 @@ export function Pricing() {
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
+              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-violet-400" />
               <span className="relative">Simple pricing,</span>
             </span>{' '}
             for everyone.
@@ -117,44 +117,45 @@ export function Pricing() {
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Starter"
-            price="$9"
+            price="Free"
             description="Good for anyone who is self-employed and just getting started."
-            href="/register"
+            href="#hero"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'Up to 10 sites',
+              'Unlimited content',
+              'Customize your site to your organization',
+              'Unlimited templates',
+              'Capture viewer emails',
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
+            name="Pro"
+            price="$39"
             description="Perfect for small / medium sized businesses."
             href="/register"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              'Everything in Basic +',
+              'Unlimited sites',
+              'Up to 10 users',
+              'Create workspaces',
+              'Option to remove "Made in Funnelfy" branding',
+              'Secure sites whit password & email verification',
             ]}
           />
           <Plan
             name="Enterprise"
-            price="$39"
+            price="Contact us /per year"
             description="For even the biggest enterprise companies."
             href="/register"
             features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+              'Everything in Pro +',
+              'Unlimited users',
+              'Custom site domains',
+              'Team workspaces',
+              'Single sign on',
+              'CRM integration',
+              'Dedicated customer success',
             ]}
           />
         </div>

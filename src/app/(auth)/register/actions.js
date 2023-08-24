@@ -14,8 +14,6 @@ export const registerNewUser = async (formData) => {
     referral_source: referral,
   }
 
-  console.log('body', body)
-
   await fetch('http://localhost:3000/app/api/register', {
     method: 'POST',
     headers: {

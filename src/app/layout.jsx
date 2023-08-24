@@ -6,11 +6,11 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s - Funnelfy',
+    default: 'Funnelfy - Close deals faster with collaborative microsites',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Auto-personalized, interactive & trackable spaces created in minutes. From cold outreach to onboarding hand-off.',
 }
 
 const inter = Inter({

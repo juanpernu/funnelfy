@@ -1,5 +1,5 @@
+import { headers } from 'next/headers'
 import Image from 'next/image'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import logoLaravel from '@/images/logos/laravel.svg'
@@ -10,6 +10,12 @@ import logoTransistor from '@/images/logos/transistor.svg'
 import logoTuple from '@/images/logos/tuple.svg'
 
 export function Hero() {
+  const headersList = headers()
+  const userAgent = headersList.get('user-agent')
+  let isMobileView = userAgent.match(
+    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  )
+
   return (
     <Container id="hero" className="pb-16 pt-20 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
@@ -33,9 +39,9 @@ export function Hero() {
       </p>
       <div className="mt-10 gap-x-6">
         <div
-          class="launchlist-widget"
+          className="launchlist-widget"
           data-key-id="KUUOCE"
-          data-height="60px"
+          data-height={isMobileView ? '120px' : '60px'}
         />
       </div>
       <div className="mt-36 lg:mt-44">

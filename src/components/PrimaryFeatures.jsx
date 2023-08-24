@@ -6,36 +6,35 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import closingAndOnboarding from '@/images/screenshots/closing-onboarding.png'
+import revenueInteligence from '@/images/screenshots/analytics.png'
+import coldOutreach from '@/images/screenshots/cold-outreach.png'
+import followUp from '@/images/screenshots/post-demo-follow-up.png'
 
 const features = [
   {
     title: 'Cold Outreach',
     description:
       'Instead of sending out those outdated sales decks, stand out from the crowd with a personalized, engaging and eye-catching microsite to get your foot in the door. Book that demo meeting too with our Calendar integrations.',
-    image: screenshotPayroll,
+    image: coldOutreach,
   },
   {
     title: 'Demo/Proposal',
     description:
       'Drop in documents, product walkthroughs, dynamic pricing, deal timelines, personalized videos and more. You can even chat back and forth with your prospect within the Pod. Delight your prospects and get deals done quicker.',
-    image: screenshotExpenses,
+    image: followUp,
   },
   {
     title: 'Deal Close',
     description:
       'With everything contained in your Pod, simply drop in contracts for signature, onboarding action plans, SLAs and anything else required to get the deal signed, sealed and delivered to Customer Success.',
-    image: screenshotVatReturns,
+    image: closingAndOnboarding,
   },
   {
     title: 'Revenue Intelligence',
     description:
       'What live deals have good buyer engagement? Which ones may close? Which ones should you follow up with? Get insights into your whole buyer journey, like never before, with Funnelfy Signals.',
-    image: screenshotReporting,
+    image: revenueInteligence,
   },
 ]
 

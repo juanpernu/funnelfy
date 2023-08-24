@@ -27,7 +27,7 @@ export function CallToAction() {
             Drive more Revenue & scale your business with your more important
             investors: Customers.
           </p>
-          <Button href="/register" color="white" className="mt-10">
+          <Button href="#hero" color="white" className="mt-10">
             Get early access
           </Button>
         </div>

@@ -17,7 +17,7 @@ export default function Home() {
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
-        <Faqs />
+        {/* <Faqs /> */}
       </main>
       <Footer />
     </>

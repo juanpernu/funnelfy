@@ -2,12 +2,9 @@ import { headers } from 'next/headers'
 import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
+import logoBilog from '@/images/logos/bilog-logo.png'
+import logoUnifyr from '@/images/logos/unifyr-logo.png'
+import logoeSponsor from '@/images/logos/esponsor-logo.png'
 
 export function Hero() {
   const headersList = headers()
@@ -54,14 +51,9 @@ export function Hero() {
         >
           {[
             [
-              { name: 'Transistor', logo: logoTransistor },
-              { name: 'Tuple', logo: logoTuple },
-              { name: 'StaticKit', logo: logoStaticKit },
-            ],
-            [
-              { name: 'Mirage', logo: logoMirage },
-              { name: 'Laravel', logo: logoLaravel },
-              { name: 'Statamic', logo: logoStatamic },
+              { name: 'Bilog', logo: logoBilog },
+              { name: 'Unifyr', logo: logoUnifyr },
+              { name: 'eSponsor', logo: logoeSponsor },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>

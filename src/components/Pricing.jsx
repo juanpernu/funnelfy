@@ -54,11 +54,18 @@ function Plan({ name, price, description, href, features, featured = false }) {
         featured ? 'order-first bg-violet-600 py-8 lg:order-none' : 'lg:py-8'
       )}
     >
-      <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
+      <h3
+        className={clsx(
+          'mt-5 font-display text-lg',
+          featured ? 'text-white' : 'text-slate-900'
+        )}
+      >
+        {name}
+      </h3>
       <p
         className={clsx(
           'mt-2 text-base',
-          featured ? 'text-white' : 'text-slate-400'
+          featured ? 'text-white' : 'text-slate-600'
         )}
       >
         {description}
@@ -70,12 +77,14 @@ function Plan({ name, price, description, href, features, featured = false }) {
         role="list"
         className={clsx(
           'order-last mt-10 flex flex-col gap-y-3 text-sm',
-          featured ? 'text-white' : 'text-slate-200'
+          featured ? 'text-white' : 'text-slate-600'
         )}
       >
         {features.map((feature) => (
           <li key={feature} className="flex">
-            <CheckIcon className={featured ? 'text-white' : 'text-slate-400'} />
+            <CheckIcon
+              className={featured ? 'text-white' : 'text-violet-400'}
+            />
             <span className="ml-4">{feature}</span>
           </li>
         ))}
@@ -98,25 +107,25 @@ export function Pricing() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-white py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-violet-400" />
               <span className="relative">Simple pricing,</span>
             </span>{' '}
             for everyone.
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
+          <p className="mt-4 text-lg text-slate-700">
             No hidden fees. Our pricing is simple and transparent.
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Starter"
-            price="Free"
+            price="Free/per user per month"
             description="Good for anyone who is self-employed and just getting started."
             href="#hero"
             features={[
@@ -130,23 +139,23 @@ export function Pricing() {
           <Plan
             featured
             name="Pro"
-            price="$39"
+            price="$39/per user per month"
             description="Perfect for small / medium sized businesses."
-            href="/register"
+            href="#hero"
             features={[
               'Everything in Basic +',
               'Unlimited sites',
               'Up to 10 users',
               'Create workspaces',
               'Option to remove "Made in Funnelfy" branding',
-              'Secure sites whit password & email verification',
+              'Secure sites with password & email verification',
             ]}
           />
           <Plan
             name="Enterprise"
             price="Contact us /per year"
             description="For even the biggest enterprise companies."
-            href="/register"
+            href="#hero"
             features={[
               'Everything in Pro +',
               'Unlimited users',

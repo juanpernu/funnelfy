@@ -70,7 +70,12 @@ function Plan({ name, price, description, href, features, featured = false }) {
       >
         {description}
       </p>
-      <p className="order-first font-display text-5xl font-light tracking-tight text-white">
+      <p
+        className={clsx(
+          'tracking-tigh order-first font-display text-5xl font-light',
+          featured ? 'text-white' : 'text-slate-900'
+        )}
+      >
         {price}
       </p>
       <ul
